@@ -38,7 +38,8 @@ const reactElement1 = React.createElement(
     anotherUser // we cant write condtionals here as it is evaluated expression
 
 )
-
+//createRoot -- behind the scenes its create a dom like structure like browser then compares the main dom with it to update the necessary things  
+//pageReload -- due to the main dom painting again like while using the JS
 ReactDOM.createRoot(document.getElementById('root')).render(
 
         //<App /> 
