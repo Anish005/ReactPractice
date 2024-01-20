@@ -15,6 +15,18 @@ function App() {
     //counter = counter + 1
     //we can also pass the directly upadated value in the setCounter(counter) or like below mentioned
     setCounter(counter + 1)
+    //if we duplicate the above line then what happens
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    //useState changes the variable in batches , these above all counter are seen as a repeated batch 
+    // and are set as a single batch
+    //then to do the thing we wanted
+    setCounter((prevCounter) => prevCounter + 1)//to get the previous counter
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
+    setCounter((prevCounter) => prevCounter + 1)
   }
   const removeVal = () => {
     //part of assignment to keep a check on the counter till 0 and dont make it negative
