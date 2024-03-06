@@ -6,7 +6,8 @@ export const TodoContext = createContext({
             id: 1,
             todo: "Todo msg",
             completed: false,
-        }
+        },
+
     ],
     addTodo: (todo) => {},//we will decide functionality in the App.jsx
     updateTodo:(id,todo) => {},
