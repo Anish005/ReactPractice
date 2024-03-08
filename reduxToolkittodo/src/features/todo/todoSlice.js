@@ -2,6 +2,7 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 //nanoid -> generates unique id
 
+//how store we look initially we need to declare initialState
 const initialState = {
     todos:[{id: 1,text:"Hello World"}]
 }
@@ -10,7 +11,7 @@ const initialState = {
 //creating slice (in general bigger version of reducer)
 export const  todoSlice = createSlice({
     name:'todo',
-    initialState,
+    initialState, 
     reducers: {
     /*incase of context API we were not writing the defn of funcs 
     but only declaring them but in redux toolkit we are defning  the func  here*/
@@ -33,6 +34,6 @@ export const  todoSlice = createSlice({
     }
 }) 
 //step -3
-//syntax for exporting
+//syntax for exporting reducers (must do to use the functionalties in the components and to store them  in one place)
 export const {addTodo, removeTodo} = todoSlice.actions 
 export default todoSlice.reducer

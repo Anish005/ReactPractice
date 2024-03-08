@@ -1,14 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import AddTodo from './components/AddTodo'
+import Todos from './components/Todos'
 
 function App() {
 
   return (
     
-    <div className='bg-slate-800'>
+    <>
 
-      <h1 className=''>hey there</h1>
-    </div>
+      <h1 className=''>TODAY'S TODO</h1>
+      <AddTodo />
+      <Todos />
+    </>
     
   )
 }
